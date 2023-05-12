@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import movieData from '../src/movieData'
 import './App.css';
 import Movies from '../src/Movies'
+import MovieCards from '../src/MovieCards'
 
 
 class App extends Component {
@@ -11,6 +12,11 @@ class App extends Component {
       allMovies: movieData
     }
   }
+
+  displaySingleMovie() {
+    onClick()
+  }
+
 
   render() {
     return (
