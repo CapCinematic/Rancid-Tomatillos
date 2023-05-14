@@ -1,8 +1,15 @@
+.scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
 .poster-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px
 }
+
 
 .posters {
     width: 25%;

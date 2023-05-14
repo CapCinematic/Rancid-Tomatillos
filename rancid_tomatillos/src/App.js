@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <main className='App'>
+      <main className='App scroll-container'>
         <Movies movies={this.state.allMovies} />
       </main>
     )
