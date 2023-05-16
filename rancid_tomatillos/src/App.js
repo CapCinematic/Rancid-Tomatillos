@@ -3,6 +3,8 @@ import movieData from '../src/movieData'
 import './App.css';
 import Movies from '../src/Movies'
 import MovieCards from '../src/MovieCards'
+import SingleMovie from '../src/SingleMovie'
+
 
 
 class App extends Component {
@@ -15,7 +17,7 @@ class App extends Component {
   }
 
   getMovieInfo = (id) => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}')
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
       .then((res) => res.json())
       .then((data) => this.setState({ singleMovie: data, allMovies: null }))
   }
@@ -32,6 +34,12 @@ class App extends Component {
       return (
         <main className='App'>
           <Movies movies={this.state.allMovies} getMovieInfo={this.getMovieInfo} />
+        </main>
+      )
+    } else {
+      return (
+        <main className='single'>
+          <SingleMovie movie={this.state.singleMovie} />
         </main>
       )
     }

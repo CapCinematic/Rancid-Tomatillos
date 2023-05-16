@@ -1,13 +1,26 @@
 import React from 'react';
 import './Movies.css';
+import movieData from '../src/movieData'
+import MovieCards from '../src/MovieCards'
 
 
-function Movies({ movies }) {
-    const moviePosters = movies.movies.map(movie => {
+function Movies({ movies, getMovieInfo }) {
+    //console.log(movies, 'dostuff')
+    const moviePosters = movies.map((movie) => {
+        //console.log(movie, 'expectedmovie')
         return (
-            <img className='posters' key={movie.id} src={movie.poster_path} onClick='displaySingleMovie()' />
-        )
-    })
+            <MovieCards
+                id={movie.id}
+                key={movie.id}
+                poster={movie.poster_path}
+                title={movie.title}
+                src={movie.poster_path}
+                release={movie.release_date}
+                rating={movie.average_rating}
+                getMovieInfo={getMovieInfo}
+            />
+        );
+    });
 
     return (
         <div className='poster-grid'>
@@ -19,9 +32,6 @@ function Movies({ movies }) {
 
 
 
-
-
-
-
-
 export default Movies
+
+
