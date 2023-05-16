@@ -1,7 +1,7 @@
 import React from 'react';
 import './Movies.css';
-import movieData from '../src/movieData'
-import MovieCards from '../src/MovieCards'
+import MovieCards from '../src/MovieCards';
+import PropTypes from 'prop-types'
 
 
 function Movies({ movies, getMovieInfo }) {
@@ -25,7 +25,6 @@ function Movies({ movies, getMovieInfo }) {
             {moviePosters}
         </div>
     )
-
 }
 
 
@@ -33,3 +32,8 @@ function Movies({ movies, getMovieInfo }) {
 export default Movies
 
 
+Movies.propTypes = {
+    title: PropTypes.string,
+    release: PropTypes.string,
+    getMovieInfo: PropTypes.func
+}

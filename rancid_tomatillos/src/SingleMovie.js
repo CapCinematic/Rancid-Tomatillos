@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types'
+
 
 function SingleMovie({ movie }) {
-    console.log('uuuugh', { movie })
     return (
         <div>
             {movie.movie.title}
             {movie.movie.release_date}
         </div>
-
     )
 }
 
 
 
+export default SingleMovie;
 
-
-export default SingleMovie
+SingleMovie.propTypes = {
+    movie: PropTypes.object
+}
