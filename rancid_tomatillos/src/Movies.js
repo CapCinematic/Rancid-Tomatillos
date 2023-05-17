@@ -5,9 +5,7 @@ import MovieCards from '../src/MovieCards'
 
 
 function Movies({ movies, getMovieInfo }) {
-    //console.log(movies, 'dostuff')
     const moviePosters = movies.map((movie) => {
-        //console.log(movie, 'expectedmovie')
         return (
             <MovieCards
                 id={movie.id}
