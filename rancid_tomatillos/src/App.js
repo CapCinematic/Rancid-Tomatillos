@@ -49,7 +49,7 @@ class App extends Component {
         <div>
           <header>
             <h1>Rancid Tomatillos</h1>
-            <button onClick={this.displayHomePage}>home</button>
+            <button className='home-button' onClick={this.displayHomePage}>home</button>
           </header>
           <main className='single'>
             <SingleMovie movie={this.state.singleMovie} />
