@@ -1,0 +1,9 @@
+.home-button{
+background: linear-gradient(to bottom, #ff9c00, #003E1F);
+padding: 10px 25px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
