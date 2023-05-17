@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import movieData from '../src/movieData'
 import './App.css';
 import Movies from '../src/Movies'
-import MovieCards from '../src/MovieCards'
 import SingleMovie from '../src/SingleMovie'
-
+import PropTypes from 'prop-types'
 
 
 class App extends Component {
@@ -29,9 +28,7 @@ class App extends Component {
   }
 
   displayHomePage = () => {
-    // this.setState(prevState => { return { allMovies: prevState.allMovies } })
     this.setState({ singleMovie: null })
-    console.log('work', this.state.allMovies)
   }
 
 
@@ -45,7 +42,6 @@ class App extends Component {
           <main className='App'>
             <Movies movies={this.state.allMovies} getMovieInfo={this.getMovieInfo} />
           </main>
-
         </div>
       )
     } else {
@@ -65,6 +61,8 @@ class App extends Component {
 }
 
 
-
-
 export default App;
+
+App.propTypes = {
+  allMovies: PropTypes.array
+}
