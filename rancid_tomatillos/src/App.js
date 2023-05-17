@@ -4,7 +4,12 @@ import './App.css';
 import Movies from '../src/Movies'
 import SingleMovie from '../src/SingleMovie'
 import PropTypes from 'prop-types'
+import { ReactDOM } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 
+const router = <BrowserRouter> <App /> </BrowserRouter>;
+
+ReactDOM.render(router, document.getElementById('root'));
 
 class App extends Component {
   constructor() {
