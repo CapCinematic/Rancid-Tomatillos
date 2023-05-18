@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import movieData from '../src/movieData'
+// import movieData from '../src/movieData'
 import './App.css';
+// import router from '../src/index';
 import Movies from '../src/Movies'
 import SingleMovie from '../src/SingleMovie'
 import PropTypes from 'prop-types'
-
+import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -48,10 +50,10 @@ class App extends Component {
       return (
         <div>
           <header>
-            <h1>Rancid Tomatillos</h1>
+            <h1>Moldy Mangos</h1>
           </header>
           <main className='App'>
-            <Movies movies={this.state.allMovies} getMovieInfo={this.getMovieInfo} />
+            <Route path='/' render={ () => <Movies movies ={this.state.allMovies} getMovieInfo={this.getMovieInfo}/> }/>
           </main>
         </div>
       )
@@ -59,11 +61,13 @@ class App extends Component {
       return (
         <div>
           <header>
-            <h1>Rancid Tomatillos</h1>
+            <h1>Moldy Mangos</h1>
+            <Link to ={'/'}>
             <button className='home-button' onClick={this.displayHomePage}>home</button>
+            </Link>
           </header>
           <main className='single'>
-            <SingleMovie movie={this.state.singleMovie} />
+            <Route path='/:id' render={ () => <SingleMovie movie ={this.state.singleMovie}/>}/>
           </main>
         </div >
       )
