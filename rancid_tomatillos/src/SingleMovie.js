@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 
 
-function SingleMovie({ movie }) {
+function SingleMovie(props) {
     return (
         <div>
-            {movie.movie.title}
-            {movie.movie.release_date}
-            {movie.movie.poster_path}
+            {props.movie.title}
+            {props.movie.release_date}
+            {props.movie.poster_path}
+            <Link to={'/'}>
+                <button>Home</button>
+            </Link>
         </div>
     )
 }
 
 
-
 export default SingleMovie;
 
-SingleMovie.propTypes = {
-    movie: PropTypes.object
-}
