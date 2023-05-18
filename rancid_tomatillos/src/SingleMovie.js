@@ -8,7 +8,7 @@ function SingleMovie({ movie }) {
         <div>
             {movie.movie.title}
             {movie.movie.release_date}
-            {/* {movie.movie.poster_path} */}
+            {movie.movie.poster_path}
         </div>
     )
 }
