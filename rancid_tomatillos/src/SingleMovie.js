@@ -8,7 +8,15 @@ function SingleMovie({ movie }) {
         <div>
             {movie.movie.title}
             {movie.movie.release_date}
-            {movie.movie.poster_path}
+            {movie.movie.budget}
+            {movie.movie.overview}
+            {movie.movie.runtime}
+            {movie.movie.revenue}
+            {movie.movie.tagline}
+            {movie.movie.genre}
+            <img src= {movie.movie.poster_path} alt='Movie Poster'></img>
+           {console.log(movie.movie.getMovieInfo)} 
+          
         </div>
     )
 }
