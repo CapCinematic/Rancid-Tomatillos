@@ -20,7 +20,6 @@ function SingleMovie(props) {
             {props.movie.tagline}
             {props.movie.genre}
             <img src= {props.movie.poster_path} alt='Movie Poster'></img>
-           {console.log(props.movie.getMovieInfo)} 
         </div>
     )
 }
