@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 
 
 
+
 function SingleMovie(props) {
     return (
-        <div>
+        <div className='single-movie'>
             <Link to={'/'}>
                 <button>Home</button>
             </Link>
