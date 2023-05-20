@@ -52,6 +52,7 @@ class App extends Component {
         <main className='App'>
           <Switch>
             <Route path='/:id' render={({ match }) => {
+              console.log(match)
               return (
                 <SingleMovie key={match.params.id} id={match.params.id} movie={this.state.singleMovie} getMovieInfo={this.getMovieInfo} />
               )
