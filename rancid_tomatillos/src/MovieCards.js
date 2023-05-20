@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 
 const MovieCards = ({ poster, title, release, rating, id, getMovieInfo }) => {
@@ -19,3 +20,11 @@ const MovieCards = ({ poster, title, release, rating, id, getMovieInfo }) => {
 
 
 export default MovieCards
+
+MovieCards.propTypes = {
+    title: PropTypes.string,
+    release: PropTypes.string,
+    rating: PropTypes.number,
+    getMovieInfo: PropTypes.func
+
+}

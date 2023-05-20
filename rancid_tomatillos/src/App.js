@@ -52,7 +52,6 @@ class App extends Component {
         <main className='App'>
           <Switch>
             <Route path='/:id' render={({ match }) => {
-              console.log(match)
               return (
                 <SingleMovie key={match.params.id} id={match.params.id} movie={this.state.singleMovie} getMovieInfo={this.getMovieInfo} />
               )
@@ -77,5 +76,7 @@ class App extends Component {
 export default App;
 
 App.propTypes = {
-  allMovies: PropTypes.array
+  allMovies: PropTypes.array,
+  singleMovie: PropTypes.array,
+  getMovieInfo: PropTypes.func
 }

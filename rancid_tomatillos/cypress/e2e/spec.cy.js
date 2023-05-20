@@ -27,7 +27,7 @@ describe('Home View', () => {
       {
         statusCode: 500,
         body: {
-          message: 'Our bad. One moment please'
+          message: 'Issue with request'
         }
       })
   })
@@ -39,6 +39,8 @@ describe("Single Movie View", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
   });
+
+
 
   it("should display the movie tagline and synopsis about that movie when clicked ", () => {
     cy.get(".cards").first().click()
@@ -73,8 +75,21 @@ describe("Single Movie View", () => {
   it("As a user, when I click the Home button I should be able to see all of the movies", () => {
     cy.get(".cards").first().click();
     cy.get("button").click()
-      .visit("http://localhost:3000")
+    cy.go('back')
       .contains("Moldy Mangos")
+  })
+
+  it("should display an error message if request is not fulfilled for page load of single movie", () => {
+    cy.intercept({
+      method: 'GET',
+      url: "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+    },
+      {
+        statusCode: 500,
+        body: {
+          message: 'Our bad. One moment please'
+        }
+      })
   })
 });
 
@@ -83,6 +98,3 @@ describe("Single Movie View", () => {
 
 
 
-//an error is displayed if single movie view does not display
-//should display url on page load
-//should have rows of 4
