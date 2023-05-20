@@ -1,25 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+// import './SingleMovie.css'
 
 
 
 function SingleMovie(props) {
     return (
-        <div>
+        <div className='single-movie'>
             <Link to={'/'}>
                 <button>Home</button>
             </Link>
+            <p className='single-movie-title'>
             {props.movie.title}
-            {props.movie.release_date}
-            {props.movie.poster_path}
-            {props.movie.budget}
+            <br></br>
+            <br></br>
+            "{props.movie.tagline}"
+            <br></br>
+            <br></br>
+            Release Date: {props.movie.release_date}
+            </p>
+            <p className='single-movie-overview'>
             {props.movie.overview}
-            {props.movie.runtime}
-            {props.movie.revenue}
-            {props.movie.tagline}
-            {props.movie.genre}
-            <img src= {props.movie.poster_path} alt='Movie Poster'></img>
+            </p>
+            <p className='single-movie-info'>
+            Run Time: {props.movie.runtime} Mins
+            <br></br>
+            <br></br>
+            Budget of: ${props.movie.budget}!
+            <br></br>
+            <br></br>
+            Bringing in a total of: ${props.movie.revenue}
+            <br></br>
+            <br></br>
+            Genre: {props.movie.genre}
+            <br></br>
+            <br></br>
+            </p>
+            <img className='movie-img' src= {props.movie.poster_path} alt='Movie Poster'></img>
         </div>
     )
 }
