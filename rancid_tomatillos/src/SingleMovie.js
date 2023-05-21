@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-// import './SingleMovie.css'
+import './SingleMovie.css'
 
 
 
@@ -12,32 +12,32 @@ function SingleMovie(props) {
                 <button alt="home button">Home</button>
             </Link>
             <p className='single-movie-title'>
-            {props.movie.title}
-            <br></br>
-            <br></br>
-            "{props.movie.tagline}"
-            <br></br>
-            <br></br>
-            Release Date: {props.movie.release_date}
+                {props.movie.title}
+                <br></br>
+                <br></br>
+                "{props.movie.tagline}"
+                <br></br>
+                <br></br>
+                Release Date: {props.movie.release_date}
             </p>
             <p className='single-movie-overview'>
-            {props.movie.overview}
+                {props.movie.overview}
             </p>
             <p className='single-movie-info'>
-            Run Time: {props.movie.runtime} Mins
-            <br></br>
-            <br></br>
-            Budget of: ${props.movie.budget}!
-            <br></br>
-            <br></br>
-            Bringing in a total of: ${props.movie.revenue}
-            <br></br>
-            <br></br>
-            Genre: {props.movie.genre}
-            <br></br>
-            <br></br>
+                Run Time: {props.movie.runtime} Mins
+                <br></br>
+                <br></br>
+                Budget of: ${props.movie.budget}!
+                <br></br>
+                <br></br>
+                Bringing in a total of: ${props.movie.revenue}
+                <br></br>
+                <br></br>
+                Genre: {props.movie.genre}
+                <br></br>
+                <br></br>
             </p>
-            <img className='movie-img' src= {props.movie.poster_path} alt='Movie Poster'></img>
+            <img className='movie-img' src={props.movie.poster_path} alt='Movie Poster'></img>
         </div>
     )
 }
@@ -45,3 +45,10 @@ function SingleMovie(props) {
 
 export default SingleMovie;
 
+SingleMovie.propTypes = {
+    title: PropTypes.string,
+    revenue: PropTypes.number,
+    genre: PropTypes.array,
+    runtime: PropTypes.string,
+    budget: PropTypes.number
+}
