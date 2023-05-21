@@ -10,7 +10,7 @@ const MovieCards = ({ poster, title, release, rating, id, getMovieInfo }) => {
                     <h2>{title}</h2>
                     <h3>{release}</h3>
                     <h3>{rating}</h3>
-                    <img className='movie-backdrop' src={poster} alt='' />
+                    <img className='movie-backdrop' src={poster} alt='movie poster backdrop'/>
                 </div>
             </div>
         </Link>

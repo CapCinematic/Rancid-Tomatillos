@@ -9,7 +9,7 @@ function SingleMovie(props) {
     return (
         <div className='single-movie'>
             <Link to={'/'}>
-                <button>Home</button>
+                <button alt="home button">Home</button>
             </Link>
             <p className='single-movie-title'>
             {props.movie.title}
