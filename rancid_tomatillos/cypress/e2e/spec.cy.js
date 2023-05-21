@@ -1,5 +1,6 @@
 describe("Moldy Mangos", () => {
   beforeEach(() => {
+    cy.intercept("GET", "**/movies/**", {fixture: "movie.json"})
     cy.visit("http://localhost:3000");
   });
 
@@ -17,14 +18,14 @@ describe("Moldy Mangos", () => {
   
   it("should have additional details about that movie when clicked ", () => {
     cy.get(".cards").first().click();
-    cy.contains("Nearly 5,000 years after");
+    cy.contains("overview");
   });
   
   it("user clicks on a movie and the details page is rendered, the URL updates to reflect that movie’s unique ID as well", () => {
     cy.get(".cards").first().click();
     cy.url().should("match", /436270/);
   });
-  
+
   it("should be able to test stub data if API is down", () => {
     cy.intercept("GET", "**/movies/**", {fixture: "movie.json"})
   });
