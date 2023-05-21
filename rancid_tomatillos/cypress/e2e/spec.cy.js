@@ -1,7 +1,9 @@
 describe('Home View', () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000")
-  })
+    cy.intercept("GET", "**/movies/**", {fixture: "movie.json"})
+    cy.visit("http://localhost:3000");
+  });
+
 
   it("should display the title of the application upon page load", () => {
     cy.contains("Moldy Mangos").should("be.visible");
@@ -92,7 +94,6 @@ describe("Single Movie View", () => {
       })
   })
 });
-
 
 
 

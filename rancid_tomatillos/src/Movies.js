@@ -21,7 +21,7 @@ function Movies({ movies, getMovieInfo }) {
     });
 
     return (
-        <div className='poster-grid'>
+        <div className='poster-grid' alt='Grid of movies'>
             {moviePosters}
         </div>
     )

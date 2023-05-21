@@ -1,0 +1,16 @@
+{
+  "movie": {
+    "id": 1,
+    "title": "tilte",
+    "poster_path": "testing",
+    "backdrop_path": "test data",
+    "release_date": "2023-03-23",
+    "overview": "long overview",
+    "genres": [],
+    "budget": 10,
+    "revenue": 20,
+    "runtime": 30,
+    "tagline": "tagline",
+    "average_rating": 1
+  }
+}
