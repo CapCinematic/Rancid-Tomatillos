@@ -76,5 +76,7 @@ class App extends Component {
 export default App;
 
 App.propTypes = {
-  allMovies: PropTypes.array
+  allMovies: PropTypes.array,
+  singleMovie: PropTypes.array,
+  getMovieInfo: PropTypes.func
 }
