@@ -22,7 +22,7 @@ To use the Moldy Mangos Movie Review App, simply navigate through the home page 
 
 ## Contributing
 
-Kelli and Isaiah created this app using a GitHub workflow and GitHub projects to help stay organized.
+Kelli (https://github.com/klwats) and Isaiah (https://github.com/CapCinematic) created this app using a GitHub workflow and GitHub projects to help stay organized.
 
 Contributing to the Moldy Mangos process by:
 
@@ -31,3 +31,14 @@ Contributing to the Moldy Mangos process by:
 3. Making our changes and committing  them to our respective branch.
 4. Pushing our changes to our now shared repository.
 5. Creating a pull request to review and merge.
+
+## Learning Goals
+
+Kelli's learning goals included becoming more comfortable with React and Router. Isaiah wanted to understand props and state better while practicing building components. Our joint learning goal was to be diligent with our project board and daily check-ins to divide work.
+
+We initially worked together to come up with the architecture for the app. We then chose to mostly divide and conquer the work with daily check-ins to make sure we were on the same page!
+
+It was initially very challenging to switch to Router from conditional rendering. Once we were able to research and understand the differences between the two it was easier to backtrack on conditional rendering and see how to follow the information being passed through Router.
+
+![ezgif com-video-to-gif](https://github.com/CapCinematic/Rancid-Tomatillos/assets/115050167/129a5be1-0dbf-40ff-a9d2-62e5fc04f58b)
+
