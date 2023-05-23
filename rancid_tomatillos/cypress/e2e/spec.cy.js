@@ -1,6 +1,6 @@
 describe('Home View', () => {
   beforeEach(() => {
-    cy.intercept("GET", "**/movies/**", {fixture: "movie.json"})
+    cy.intercept("GET", "**/movies/**", { fixture: "movie.json" })
     cy.visit("http://localhost:3000");
   });
 
@@ -70,15 +70,13 @@ describe("Single Movie View", () => {
   it("As a user when I am viewing a single movie and press the Home button, the URL should update", () => {
     cy.get(".cards").first().click();
     cy.url().should("match", /436270/);
-    cy.get("button").click()
-      .visit("http://localhost:3000")
+    cy.returnHome()
   })
 
   it("As a user, when I click the Home button I should be able to see all of the movies", () => {
     cy.get(".cards").first().click();
-    cy.get("button").click()
-    cy.go('back')
-      .contains("Moldy Mangos")
+    cy.returnHome()
+    cy.contains("Moldy Mangos")
   })
 
   it("should display an error message if request is not fulfilled for page load of single movie", () => {
